@@ -6,7 +6,7 @@
 # Api to list the Todos
 ![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/4a5a61b6-43e0-405d-8407-8880ba96313f)
 
-# Api to retrieve the details for specific todo
+# Api to retrieve the details of specific todo
 ![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/9769dfff-cdab-4fc4-9550-3bf0ebcc901d)
 
 # Api to add new todo
