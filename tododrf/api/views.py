@@ -14,11 +14,20 @@ from .models import Task
 @api_view(['GET'])
 def apiOverview(request):
 	api_urls = {
+		'Function Based':[ {
 		'List':'/todoList/',
 		'Detail View':'/todoDetail/<str:pk>/',
 		'Create':'/todoCreate/',
 		'Update':'/todoUpdate/<str:pk>/',
-		'Delete':'/todoDelete/<str:pk>/',
+		'Delete':'/todoDelete/<str:pk>/'}
+		],
+		'Class Based': [{
+			'List': '/todoListView/',
+			'Detail View': '/todoDetailView/<str:pk>/',
+			'Create': '/todoCreateView/',
+			'Update': '/todoUpdateView/<str:pk>/',
+			'Delete': '/todoDeleteView/<str:pk>/'}
+		]
 		}
 
 	return Response(api_urls)
@@ -45,7 +54,7 @@ def todoCreate(request):
 
 	return Response(serializer.data)
 
-@api_view(['POST'])
+@api_view(['PATCH'])
 def todoUpdate(request, pk):
 	task = Task.objects.get(id=pk)
 	serializer = TaskSerializer(instance=task, data=request.data)
