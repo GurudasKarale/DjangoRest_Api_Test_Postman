@@ -23,4 +23,5 @@ psycopg2            2.9.1
 ![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/28e050e5-b4d3-49f3-ac75-4579dfcd8a5b)
 
 # Api to Delete a todo
+![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/6fc9481d-7c93-421d-ad22-a23959c96976)
 
