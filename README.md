@@ -1,6 +1,4 @@
-# DjangoRest_Api Test using Postman
-
-# CRUD APIs created using both function class based views
+# CRUD APIs created using both function and class based views
 
 # Api Overview
 ![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/69dd13fa-0580-4115-9e4e-3981cd546cd3)
