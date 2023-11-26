@@ -70,4 +70,4 @@ def todoDelete(request, pk):
 	task = Task.objects.get(id=pk)
 	task.delete()
 
-	return Response('Item succsesfully delete!')
+	return Response('Item is deleted successfully !')
