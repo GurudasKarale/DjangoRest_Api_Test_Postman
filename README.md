@@ -1,7 +1,7 @@
 # CRUD APIs created using both function and class based views
 
-#Requirement
-#
+# Requirement
+
 Django              3.1.5
 django-cors-headers 3.7.0
 djangorestframework 3.12.3
