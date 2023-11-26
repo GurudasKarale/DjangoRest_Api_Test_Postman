@@ -14,30 +14,30 @@ from .models import Task
 @api_view(['GET'])
 def apiOverview(request):
 	api_urls = {
-		'List':'/task-list/',
-		'Detail View':'/task-detail/<str:pk>/',
-		'Create':'/task-create/',
-		'Update':'/task-update/<str:pk>/',
-		'Delete':'/task-delete/<str:pk>/',
+		'List':'/todoList/',
+		'Detail View':'/todoDetail/<str:pk>/',
+		'Create':'/todoCreate/',
+		'Update':'/todoUpdate/<str:pk>/',
+		'Delete':'/todoDelete/<str:pk>/',
 		}
 
 	return Response(api_urls)
 
 @api_view(['GET'])
-def taskList(request):
+def todoList(request):
 	tasks = Task.objects.all().order_by('-id')
 	serializer = TaskSerializer(tasks, many=True)
 	return Response(serializer.data)
 
 @api_view(['GET'])
-def taskDetail(request, pk):
+def todoDetail(request, pk):
 	tasks = Task.objects.get(id=pk)
 	serializer = TaskSerializer(tasks, many=False)
 	return Response(serializer.data)
 
 
 @api_view(['POST'])
-def taskCreate(request):
+def todoCreate(request):
 	serializer = TaskSerializer(data=request.data)
 
 	if serializer.is_valid():
@@ -46,7 +46,7 @@ def taskCreate(request):
 	return Response(serializer.data)
 
 @api_view(['POST'])
-def taskUpdate(request, pk):
+def todoUpdate(request, pk):
 	task = Task.objects.get(id=pk)
 	serializer = TaskSerializer(instance=task, data=request.data)
 
@@ -57,7 +57,7 @@ def taskUpdate(request, pk):
 
 
 @api_view(['DELETE'])
-def taskDelete(request, pk):
+def todoDelete(request, pk):
 	task = Task.objects.get(id=pk)
 	task.delete()
 
