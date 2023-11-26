@@ -1,5 +1,11 @@
 # CRUD APIs created using both function and class based views
 
+#Requirement
+Django              3.1.5
+django-cors-headers 3.7.0
+djangorestframework 3.12.3
+psycopg2            2.9.1
+
 # Api Overview
 ![image](https://github.com/GurudasKarale/DjangoRest_Api_Test_Postman/assets/67753744/69dd13fa-0580-4115-9e4e-3981cd546cd3)
 
